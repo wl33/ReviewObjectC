@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "calculator.h"
+#define MAX(A,B) A>=B?A:B
 
 typedef struct{
     char color[10];
@@ -39,6 +40,9 @@ int main(int argc, const char * argv[]) {
         double y=3;
         Operator1 myOperator = ADD;
         NSLog(@"This result is %.2lf",calculate1(x, y, myOperator));
+        
+        NSLog(@"MAX(%lf , %lf) is %lf",y,x,MAX(x,y));
+        
     }
     
     return 0;
